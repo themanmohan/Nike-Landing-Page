@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 import { shoes, statistics } from "../constants";
-import { Button, ShoeCard } from "../components";
+import { Button, ShoeCard, Stats } from "../components";
 import { bigShoe1 } from "../assets/images";
 import { arrowRight } from "../assets/icons";
 
@@ -35,16 +35,7 @@ function Hero() {
 
         <Button label='Shop now' iconURL={arrowRight} />
 
-        <div className='flex justify-start items-start flex-wrap w-full mt-20 gap-16'>
-          {statistics.map((stat, index) => (
-            <div key={index}>
-              <p className='text-4xl font-palanquin font-bold'>{stat.value}</p>
-              <p className='leading-7 font-montserrat text-slate-gray'>
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </div>
+        <Stats />
 
       </div>
 
